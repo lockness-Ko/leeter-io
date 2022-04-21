@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #412d2d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #e45959;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +35,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.NavBar {
+  background-color: #342828;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.NavBar-item {
+  background-color: #342828;
+  float: left;
+}
+
+.NavBar-link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.NavBar-link:hover {
+  background-color: #e45959;
 }
