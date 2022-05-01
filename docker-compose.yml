@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/lockness-ko/leeter-io-frontend:latest
+    networks:
+      front:
+        ipv4_address: 10.0.0.2
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/lockness-ko/leeter-io-api:latest
+    networks:
+      front:
+        ipv4_address: 10.0.0.3
+  
+
+networks:
+  front:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/24
+          gateway: 10.0.0.1

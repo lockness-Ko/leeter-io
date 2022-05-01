@@ -47,7 +47,7 @@ export class Log extends React.Component {
     }
 
     handleSubmit(e: any) {
-
+        alert(JSON.stringify(this.state));
         e.preventDefault();
     }
 
@@ -57,11 +57,11 @@ export class Log extends React.Component {
                 <div className="App-header">
                     <h2>Login/Sign-up</h2>
                     <div className='Login-form'>
-                        <input type="text" onClick={this.handleUsernameChange} className='Login-input' name="username" id="LoginUsername" placeholder='Your username..' /><br />
-                        <input type="password" onClick={this.handlePasswordChange} className='Login-input' name="password" id="LoginPassword" placeholder='Your password..' /><br />
-                        <input type="password" onClick={this.handleTotpChange} className='Login-input' name="totp" id="LoginTOTP" placeholder='TOTP secret or code..' /><br />
+                        <input type="text" onChange={this.handleUsernameChange} className='Login-input' name="username" id="LoginUsername" placeholder='Your username..' /><br />
+                        <input type="password" onChange={this.handlePasswordChange} className='Login-input' name="password" id="LoginPassword" placeholder='Your password..' /><br />
+                        <input type="password" onChange={this.handleTotpChange} className='Login-input' name="totp" id="LoginTOTP" placeholder='TOTP secret or code..' /><br />
                         <hr />
-                        <input type="checkbox" onClick={this.handleSigninChange} name="signup" id="LoginSignup" /><span className='Login-checktext'>Sign-up</span>
+                        <input type="checkbox" onChange={this.handleSigninChange} name="signup" id="LoginSignup" /><span className='Login-checktext'>Sign-up</span>
                         <button className='Login-button' onClick={this.handleSubmit}>Login</button>
                     </div>
                 </div>
