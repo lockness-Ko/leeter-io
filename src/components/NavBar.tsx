@@ -1,9 +1,7 @@
-// import React from 'react'
-
-import React from "react"
+import { NavLink } from "react-router-dom";
 
 const NavBarItem = (props: any) => {
-    return <li className="NavBar-item"><a className={props.Active ? "NavBar-active NavBar-link" : "NavBar-link"} href={props.Url}>{props.Text}</a></li>
+    return <li className="NavBar-item"><NavLink className={props.Active ? "NavBar-active NavBar-link" : "NavBar-link"} to={props.Url}>{props.Text}</NavLink></li>
 }
 
 export const NavBar = () => {

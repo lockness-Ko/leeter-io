@@ -8,18 +8,19 @@ function App() {
 		<>
 			<NavBar />
 			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
+				<h1>Leeter</h1>
+				<img src={logo} className="App-logo" alt="leeter.io logo" />
 				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
+					A fast paced ctf/wargaming speedrunning app
 				</p>
-				<a
+				{/* <a
 					className="App-link"
 					href="https://reactjs.org"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
 					Learn React
-				</a>
+				</a> */}
 			</header>
 		</>
 	);
